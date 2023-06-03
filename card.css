@@ -1,0 +1,56 @@
+.component {
+    position: relative;
+    width: 30%;
+    margin: 5rem auto;
+    padding: 1rem;
+    box-shadow: 10px 10px 20px gray,10px 10px 20px gray,10px 10px 20px gray;
+    text-align: center;
+  }
+
+  
+  .credit-card h2 {
+    color: black;
+  }
+  
+  .component .credit-card form {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .component .credit-card .line {
+    display: flex;
+  }
+  
+  .component .credit-card .line input {
+    width: 20%; 
+    flex: 1;
+    margin: 0.4rem 0.3rem;
+  }
+  
+  input {
+      border: none;
+      border-bottom: 1px solid black;
+      margin: 1rem 0;
+      padding: 4px;
+      font-size: 1rem;
+      outline: none;
+  }
+  
+  input::-webkit-input-placeholder {
+      color: gray;
+  }
+  
+  .valid-button {
+      border: 0;
+      padding: 1rem 2rem;
+      background-color:pink;
+      color: #fff;
+      font: bold 18px sans-serif;
+      transition: 0.7s;
+      margin-top:2rem;
+  }
+  
+  .valid-button:hover {
+    background-color: #21dd21;
+    box-shadow: none;
+  }

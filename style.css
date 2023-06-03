@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,200;1,700&display=swap');
+@import url('./slider.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+
+    
+}
+.bg {
+    opacity: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+}
+.bg .loader {
+    width: 400px;
+    height: 400px;
+}
+.bg .loader img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.app {
+    transition: 0.9s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.app .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    /* background: #fff; */
+    /* position: fixed; */
+}
+.app .navbar .menu {
+    margin-left: 30%;
+    list-style: none;
+    float: right;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.app .navbar .menu .menu-li {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+.app .navbar .menu input {
+    display: none;
+    margin-right: 12px;
+    width: 180px;
+    border-radius: 12px;
+    text-indent: 12px;
+}
+.app .slider {
+    position: relative;
+    left: 0;
+    width: 300%;
+    height: 550px;
+    display: flex;
+    transition: 0.9s;
+}
+.app .slider .item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.app .slider .item .text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 30%; 
+}
+.app .slider .item .text button {
+    width: 150px;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 0;
+    background:  #f035a8;
+    transition: 0.7s;
+}
+.app .slider .item .text button:hover{
+    color: #fff;
+    background: #000;
+
+}
+.app .slider .item .text span {
+    color: #f035a8;
+}
+.app .slider .item .img {
+    width: 670px;
+    height: 100%;
+
+}
+.app .slider .item .img img {
+    width: 88%;
+    height: 100%;
+    border-radius: 52%;
+    box-shadow: 10px 0px 20px gray;
+
+    object-fit: contain;
+}
+.app .controler {
+    width: 170px;
+    height: 70px;
+    display: flex;
+    position:sticky;
+    left: 79%;
+}
+.app .controler .btn {
+    margin-left:  30px;
+}
+.app .product-box {
+    width: 100%;
+    min-height: 700px;
+}
+.app .product-box #vern {
+    text-align: center;
+    width: 100%;
+}
+
+.app .product-box .box {
+    padding: 25px;
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.app .product-box .box .item {
+    height: 520px;
+    width: 30%;
+    padding: 25px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 10px 10px 20px #acacac;
+    margin-bottom: 25px;
+}
+.app .product-box .box .item img {
+    width: 100%;
+    height: 261px;
+    object-fit: cover;
+    transition: 0.7s;
+}
+.app .product-box .box .item img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px #acacac;
+}
+.app .product-box .box .item p {
+    font-size: 12px;
+    text-align: center;
+}
+#shop-btn{
+    width: 140px;
+    padding: 12px;
+    font: bold 18px sans-serif;
+    border: 0px;
+    background: pink;
+    cursor: pointer;
+    transition: 0.7s;
+}
+#shop-btn:hover{
+    background: plum;
+}
+.app .about-box {
+    width: 100%;
+    min-height: 700px;
+    background: url('./images/back.jpg') center / cover;
+    background-repeat: no-repeat;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.app .about-box .item p {
+    text-align: center;
+    font:bold 34px sans-serif;
+    width: 300px;
+    color: #fff;
+    padding: 10px;
+    margin: 40px;
+}
+.app .about-box .item {
+    width: 500px;
+    height: 500px;
+}
+.app .about-box .item #ab-p {
+    background: #fff;
+    color: #000;
+}
+.app .about-box .item1 {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.app .about-box .item1 p {
+    text-align: center;
+    font: bold 18px sans-serif;
+    color:#fff;
+}
+.app .about-box .item1 h1 {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    text-decoration: underline;
+}
+.app .about-box .item1 button {
+    width: 165px;
+    height: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 0px ;
+    font: bold 18px sans-serif;
+    transition: 0.5s;
+}
+.app .about-box .item1 button:hover {
+    color: #fff;
+    background: #000;
+}
+.app .contact {
+    width: 100%;
+    min-height: 800px;
+    background: url('images/cbg.jpg') center / cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+} 
+
+.app .contact .box h1 {
+    width: 100%;
+    text-align: center;
+}
+.app  .contact .box {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 20px gray,10px 10px 20px gray,10px 10px 20px gray;
+}
+.app .contact .box1 {
+    width: 700px;
+    height: 550px;
+}
+.app .contact .box input, textarea{
+    text-indent: 25px;
+    width: 70%;
+    padding: 8px;
+}
+
+.app .contact .box button{
+    width: 140px;
+   padding: 10px;
+   font: bold 18px sans-serif;
+   transition: 0.7s;
+   border: 0px;
+}
+.app .contact .box button:hover{
+    color: white;
+    background:#21dd21;
+    
+}
+.app .footer {
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    min-height: 250px;
+    background: #000;
+    
+    color: #fff;
+}
+.app .footer .ul {
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app .footer .ul a,.app .footer .ul li {
+    text-decoration: none;
+    list-style: none;
+    margin: 12px;
+    font: bold 16px sans-serif;
+    color: #fff;
+}
+.app .copyrighter {
+    height: 50px;
+    font: bold 16px sans-serif;
+    text-align: center;
+    background: pink;
+}
+
+
+
